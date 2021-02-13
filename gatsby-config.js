@@ -6,21 +6,43 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     // {
-    //   resolve: 'gatsby-source-wordpress',
+    //   // follow this:  https://www.gatsbyjs.com/plugins/gatsby-plugin-react-i18next/
+    //   // or this if you decided to not use the plugin:  https://medium.com/@makerspirit/step-by-step-guide-to-use-i18next-in-gatsby-app-19d21f2b723d
+    //   resolve: `gatsby-plugin-react-i18next`,
     //   options: {
-    //     // The base url to your WP site.
-    //     baseUrl: 'wpdemo.gatsbycentral.com',
-    //     // WP.com sites set to true, WP.org set to false
-    //     hostingWPCOM: false,
-    //     // The protocol. This can be http or https.
-    //     protocol: 'https',
-    //     // Use 'Advanced Custom Fields' Wordpress plugin
-    //     useACF: false,
-    //     auth: {},
-    //     // Set to true to debug endpoints on 'gatsby build'
-    //     verboseOutput: false,
+    //     path: `${__dirname}/src/locales`,
+    //     languages: [`en`, `da`],
+    //     defaultLanguage: `en`,
+
+    //     // you can pass any i18next options
+    //     // pass following options to allow message content as a key
+    //     i18nextOptions: {
+    //       interpolation: {
+    //         escapeValue: false, // not needed for react as it escapes by default
+    //       },
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
+    //     pages: [
+    //       {
+    //         matchPath: '/area',
+    //         getLanguageFromPath: true,
+    //         languages: ['en', 'da'],
+    //         // excludeLanguages: ['es'],
+    //       },
+    //       {
+    //         matchPath: '/',
+    //         languages: ['en', 'da'],
+    //       },
+    //     ],
     //   },
     // },
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        url: 'http://infosysoft.com/admin-animesh/graphql',
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     // {

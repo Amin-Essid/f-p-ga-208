@@ -35,7 +35,6 @@ export default class header extends Component {
                     {/* enter css here */}
                     {`
                     
-
                     `}
                 </style>
 
